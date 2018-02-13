@@ -7,9 +7,9 @@ class Riddle
 
   def check
     if (@answer1 == "a clock") && (@answer2 == "a candle") && (@answer3 == "a teapot")
-      "Correct"      
-    else
-      "Try again"
+      "Correct"
+    elsif (@answer1 != "a clock") || (@answer2 != "a candle") || (@answer3 != "a teapot")
+      "Fail"
     end
   end
 end
