@@ -4,6 +4,10 @@ class Riddle
   end
 
   def check
-
+    if @answer == "a clock"
+      "Correct"
+    else
+      "Try again"
+    end   
   end
 end
