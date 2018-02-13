@@ -29,7 +29,7 @@ class Riddle
         return "Success!"
       elsif (input1 != "a clock") || (input2 != "a candle") || (input3 != "a teapot")
         num_of_attempts += 1
-        return "Fail!"
+        return "Fail! Try again. Attempts: " + num_of_attempts.to_s
       end
     end
   end
