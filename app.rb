@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/sphinx')
+require('pry')
 
 get('/') do
   new_riddle = Riddle.new
@@ -10,6 +11,11 @@ get('/') do
 end
 
 post('/output') do
-  @hello = "Hello"
+  @guess = params.fetch("guess")
+  if @guess == "a clock" || "a candle" || "a teapot"
+    "Success"
+  else
+    "Try again"
   erb(:output)
+  end
 end
